@@ -39,20 +39,20 @@ public class cafeteria2 extends AppCompatActivity {
         ex1.put("num1",10);
         ex1.put("num2",15);
 
-        db.collection("example")
-                .add(ex1)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d("tag", "DocumentSnapshot added with Id: "+documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w("tag", "Error",e);
-                    }
-                });
+//        db.collection("example")
+//                .add(ex1)
+//                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//                    @Override
+//                    public void onSuccess(DocumentReference documentReference) {
+//                        Log.d("tag", "DocumentSnapshot added with Id: "+documentReference.getId());
+//                    }
+//                })
+//                .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Log.w("tag", "Error",e);
+//                    }
+//                });
 
 
 
@@ -63,7 +63,7 @@ public class cafeteria2 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d("tag", document.getId() + " => " + document.getData());
+                                Log.d("tag", document.getId() + " -> " + document.getData());
                             }
                         } else {
                             Log.w("tag", "Error getting documents.", task.getException());

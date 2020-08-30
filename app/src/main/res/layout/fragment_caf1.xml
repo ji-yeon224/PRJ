@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Caf1">
+
+    <com.dinuscxj.progressbar.CircleProgressBar
+
+        android:id="@+id/cpb_circlebar1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progress_end_color="#ABF200"
+        app:progress_start_color="#FFBB00"
+        app:progress_stroke_cap="round"
+        app:progress_stroke_width="20dp "
+        app:progress_text_size="25sp"
+        app:style="solid_line" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="식당1 혼잡도"
+        android:fontFamily="@font/handon300"
+        android:textColor="#0B0A0A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/cpb_circlebar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>
